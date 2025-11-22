@@ -29,7 +29,13 @@
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
-	<set name="BUILD_DIR" value="export" />
+	<set name="BUILD_DIR" value="export/debug" if="debug"/>
+	<set name="BUILD_DIR" value="export/release" unless="debug"/>
+
+	<section if="BUILD_DIR_APPEND">
+		<set name="BUILD_DIR" value="export/${BUILD_DIR_APPEND}" />
+	</section>
+
 	<source path="source" />
 	<assets path="assets" />
 
