@@ -2,7 +2,7 @@ package sphis.gridblocks;
 
 import flixel.FlxState;
 
-class Main extends FlxState
+class Gridblocks extends FlxState
 {
 	override public function create()
 	{
