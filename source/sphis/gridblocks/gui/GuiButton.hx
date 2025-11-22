@@ -20,11 +20,11 @@ class GuiButton extends FlxTypedGroup<FlxSprite>
 		button = new FlxSprite(x, y).loadGraphic('assets/gui/button-atlas.png', true, 64, 16);
 		button.animation.add('idle', [0]);
 		button.animation.add('hover', [1]);
-		button.scale.set(2, 2);
+		button.scale.set(2,2);
 		add(button);
 
 		text_field = new FlxText(button.getGraphicMidpoint().x, button.getGraphicMidpoint().y, button.frameWidth, text, size);
-		text_field.setFormat(null, size, FlxColor.WHITE, CENTER, SHADOW_XY(2, 2), FlxColor.BLACK);
+		text_field.setFormat(null, size, FlxColor.WHITE, CENTER, SHADOW, FlxColor.BLACK);
 		add(text_field);
 	}
 
@@ -44,7 +44,7 @@ class GuiButton extends FlxTypedGroup<FlxSprite>
 			button.animation.play('idle');
 		}
 
+		text_field.fieldWidth = button.width;
 		text_field.setPosition(button.x, button.y);
-		text_field.fieldWidth = button.frameWidth;
 	}
 }
