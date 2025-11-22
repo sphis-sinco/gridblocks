@@ -1,8 +1,8 @@
-package;
+package sphis.gridblocks;
 
 import flixel.FlxState;
 
-class PlayState extends FlxState
+class Main extends FlxState
 {
 	override public function create()
 	{
