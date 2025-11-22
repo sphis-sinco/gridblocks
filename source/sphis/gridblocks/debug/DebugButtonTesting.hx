@@ -11,5 +11,6 @@ class DebugButtonTesting extends FlxState
 
 		var button:GuiButton = new GuiButton(0, 0, 'Hello world');
         add(button);
+		button.button.screenCenter();
 	}
 }
