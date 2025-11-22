@@ -26,6 +26,8 @@ class GuiButton extends FlxTypedGroup<FlxSprite>
 		text_field = new FlxText(button.getGraphicMidpoint().x, button.getGraphicMidpoint().y, button.frameWidth, text, size);
 		text_field.setFormat(null, size, FlxColor.WHITE, CENTER, SHADOW, FlxColor.BLACK);
 		add(text_field);
+
+		button.updateHitbox();
 	}
 
 	override function update(elapsed:Float)
@@ -44,7 +46,6 @@ class GuiButton extends FlxTypedGroup<FlxSprite>
 			button.animation.play('idle');
 		}
 
-		text_field.fieldWidth = button.width;
 		text_field.setPosition(button.x, button.y);
 	}
 }
